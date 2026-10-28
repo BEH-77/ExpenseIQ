@@ -23,7 +23,7 @@ This project was developed as part of **Assignment 2 – GitHub Collaboration & 
 | Member | GitHub Username | Responsibilities |
 |---|---|---|
 | Badr | `@BEH-77` | Expense Management |
-| Reda Nadir | `@xivzk` | Expense Analysis |
+| Erraji Jihane | `@erraji-jihane` | Expense Analysis |
 
 ## Technologies
 
