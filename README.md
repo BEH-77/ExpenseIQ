@@ -5,6 +5,8 @@
 
 This project was developed as part of **Assignment 2 – GitHub Collaboration & Automation**, focusing on collaborative software development, version control, unit testing, and continuous integration.
 
+**Chosen theme:** Expense Tracker. **Group size:** 2 members.
+
 ## Features
 
 ### 1. Expense Management
@@ -34,7 +36,7 @@ This project was developed as part of **Assignment 2 – GitHub Collaboration & 
 - **pytest** – Unit testing
 - **Git & GitHub** – Version control and collaboration
 - **GitHub Actions** – Automated pytest checks on pushes and pull requests
-- **GitHub Pages** – Project documentation website (published after setup)
+- **GitHub Pages** – Published project documentation website
 
 ## Project Structure
 
@@ -117,9 +119,9 @@ The workflow in `.github/workflows/tests.yml` installs dependencies and runs the
 
 ## GitHub Pages
 
-The static project website lives in `docs/` and is prepared for deployment from the `main` branch and `/docs` folder. After the website branch is reviewed and merged, enable GitHub Pages in repository **Settings → Pages → Build and deployment**, select **Deploy from a branch**, then select `main` and `/docs`.
+The static project website lives in `docs/` and is published from the `main` branch and `/docs` folder.
 
-Expected website URL: [https://beh-77.github.io/ExpenseIQ/](https://beh-77.github.io/ExpenseIQ/). The link will work after GitHub Pages is enabled and the first deployment completes.
+Live website: [https://beh-77.github.io/ExpenseIQ/](https://beh-77.github.io/ExpenseIQ/).
 
 ## Project Status
 
