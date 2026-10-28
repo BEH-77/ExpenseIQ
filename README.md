@@ -14,7 +14,7 @@ This project was developed as part of **Assignment 2 – GitHub Collaboration & 
 - Validate expense information.
 - Store and retrieve expenses from a local JSON file.
 
-### 2. Expense Analytics (Planned)
+### 2. Expense Analytics 
 - Calculate total expenses.
 - Calculate spending by category.
 - Identify the category with the highest spending.
@@ -41,15 +41,14 @@ This project was developed as part of **Assignment 2 – GitHub Collaboration & 
 ExpenseIQ/
 ├── expenseiq/
 │   ├── __init__.py
+│   ├── analytics.py       
 │   ├── expenses.py
 │   ├── storage.py
 │   └── cli.py
 ├── tests/
+│   ├── test_analytics.py  
 │   ├── test_expenses.py
 │   └── test_storage.py
-├── .gitignore
-├── requirements.txt
-└── README.md
 ```
 
 ## Installation
@@ -57,7 +56,7 @@ ExpenseIQ/
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/ExpenseIQ.git
+git clone https://github.com/BEH-77/ExpenseIQ.git
 cd ExpenseIQ
 ```
 
@@ -78,7 +77,7 @@ python -m expenseiq.cli update 1 --amount 13.00
 python -m expenseiq.cli delete 1
 ```
 
-Dates use `YYYY-MM-DD`. Amounts must be greater than zero. Expense analytics are planned separately.
+Dates use YYYY-MM-DD. Amounts must be greater than zero. Expense analytics are available as pure functions in expenseiq.analytics.
 
 ## Running Tests
 
