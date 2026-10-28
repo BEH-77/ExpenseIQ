@@ -22,8 +22,8 @@ This project was developed as part of **Assignment 2 – GitHub Collaboration & 
 
 | Member | GitHub Username | Responsibilities |
 |---|---|---|
-| Badr | `@YOUR_USERNAME` | Expense Management |
-| Reda Nadir | `@REDA_USERNAME` | Expense Analysis |
+| Badr | `@BEH-77` | Expense Management |
+| Reda Nadir | `@xivzk` | Expense Analysis |
 
 ## Technologies
 
