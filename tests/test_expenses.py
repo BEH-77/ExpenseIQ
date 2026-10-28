@@ -17,6 +17,21 @@ def test_add_and_view_expense(manager):
     assert manager.list_expenses() == [expense]
 
 
+def test_list_expenses_returns_a_copy(manager):
+    expense = manager.add_expense(12.5, "Food", "2026-10-28", "Lunch")
+    listed = manager.list_expenses()
+    listed.clear()
+
+    assert manager.list_expenses() == [expense]
+
+
+def test_small_positive_amount_and_leap_day_are_valid(manager):
+    expense = manager.add_expense(0.01, "Food", "2024-02-29", "Small purchase")
+
+    assert manager.get_expense(expense.id).amount == 0.01
+    assert manager.get_expense(expense.id).date == "2024-02-29"
+
+
 @pytest.mark.parametrize("amount", [0, -1, float("nan"), float("inf"), True])
 def test_invalid_amounts_are_rejected(manager, amount):
     with pytest.raises(ValueError, match="Amount"):
@@ -25,10 +40,12 @@ def test_invalid_amounts_are_rejected(manager, amount):
     assert manager.list_expenses() == []
 
 
-@pytest.mark.parametrize("date", ["2026-02-30", "28/10/2026", "20261028", ""])
+@pytest.mark.parametrize("date", ["2026-02-30", "2025-02-29", "28/10/2026", "20261028", ""])
 def test_invalid_dates_are_rejected(manager, date):
     with pytest.raises(ValueError, match="Date"):
         manager.add_expense(12.5, "Food", date, "Lunch")
+
+    assert manager.list_expenses() == []
 
 
 @pytest.mark.parametrize("field", ["category", "description"])
@@ -57,7 +74,18 @@ def test_invalid_update_leaves_saved_expense_unchanged(manager):
     with pytest.raises(ValueError, match="Amount"):
         manager.update_expense(1, amount=0)
 
+    assert manager.get_expense(1) == original
     assert ExpenseManager(manager.path).get_expense(1) == original
+
+
+def test_invalid_date_update_leaves_expense_unchanged(manager):
+    original = manager.add_expense(12.5, "Food", "2026-10-28", "Lunch")
+
+    with pytest.raises(ValueError, match="Date"):
+        manager.update_expense(original.id, date="2026-02-30")
+
+    assert manager.get_expense(original.id) == original
+    assert ExpenseManager(manager.path).get_expense(original.id) == original
 
 
 def test_delete_existing_expense(manager):
