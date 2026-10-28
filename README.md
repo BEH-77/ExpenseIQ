@@ -33,8 +33,8 @@ This project was developed as part of **Assignment 2 – GitHub Collaboration & 
 - **Python** – Application logic
 - **pytest** – Unit testing
 - **Git & GitHub** – Version control and collaboration
-- **GitHub Actions** – Planned automated testing
-- **GitHub Pages** – Planned project documentation website
+- **GitHub Actions** – Automated pytest checks on pushes and pull requests
+- **GitHub Pages** – Project documentation website (published after setup)
 
 ## Project Structure
 
@@ -50,6 +50,11 @@ ExpenseIQ/
 │   ├── test_analytics.py  
 │   ├── test_expenses.py
 │   └── test_storage.py
+├── docs/
+│   ├── index.html         # GitHub Pages website
+│   └── styles.css
+└── .github/workflows/
+    └── tests.yml          # Automated pytest workflow
 ```
 
 ## Installation
@@ -61,11 +66,15 @@ git clone https://github.com/BEH-77/ExpenseIQ.git
 cd ExpenseIQ
 ```
 
-Install the required dependencies:
+Create a virtual environment and install the test dependency (Python 3.10 or newer):
 
 ```bash
-pip install -r requirements.txt
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
 ```
+
+On Windows, activate the environment with `.venv\Scripts\activate` instead of `source .venv/bin/activate`.
 
 ## Using Expense Management
 
@@ -85,10 +94,10 @@ Dates use YYYY-MM-DD. Amounts must be greater than zero. Expense analytics are a
 Run all unit tests using:
 
 ```bash
-python -m pytest
+python -m pytest -v
 ```
 
-The project aims to include at least six meaningful unit tests covering normal behavior, edge cases, and invalid inputs.
+The suite covers expense management, validation, local storage, and analytics.
 
 ## GitHub Collaboration
 
@@ -104,11 +113,13 @@ The `main` branch is protected through GitHub repository rules.
 
 ## Continuous Integration
 
-GitHub Actions testing is planned for a later stage of the assignment.
+The workflow in `.github/workflows/tests.yml` installs dependencies and runs the full pytest suite on pushes and pull requests.
 
 ## GitHub Pages
 
-The project website is planned for a later stage of the assignment.
+The static project website lives in `docs/` and is prepared for deployment from the `main` branch and `/docs` folder. After the website branch is reviewed and merged, enable GitHub Pages in repository **Settings → Pages → Build and deployment**, select **Deploy from a branch**, then select `main` and `/docs`.
+
+Expected website URL: [https://beh-77.github.io/ExpenseIQ/](https://beh-77.github.io/ExpenseIQ/). The link will work after GitHub Pages is enabled and the first deployment completes.
 
 ## Project Status
 
@@ -117,5 +128,3 @@ Project status: Development in progress.
 ## License
 
 Created for educational purposes as part of Assignment 2 – GitHub Collaboration & Automation.
-
-note something is changed
