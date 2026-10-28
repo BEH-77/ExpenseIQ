@@ -24,8 +24,8 @@ This project was developed as part of **Assignment 2 – GitHub Collaboration & 
 
 | Member | GitHub Username | Responsibilities |
 |---|---|---|
-| Badr | `@BEH-77` | Core Expense Management: add, view, edit, and delete expenses; validate expense information; implement expense storage and retrieval. |
-| Reda Nadir | `@xivzk` | Expense Analytics: calculate total spending and expenses by category; identify the highest-spending category; generate spending summaries and statistics. |
+| Badr | `@BEH-77` | Expense Management |
+| Erraji Jihane | `@erraji-jihane` | Expense Analysis |
 
 ## Technologies
 
