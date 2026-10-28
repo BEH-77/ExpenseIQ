@@ -1,8 +1,6 @@
 """Small command-line interface for managing expenses."""
 
 import argparse
-from dataclasses import asdict
-
 from .expenses import ExpenseManager
 
 
