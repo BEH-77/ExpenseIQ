@@ -1,10 +1,7 @@
 # ExpenseIQ
 
-<<<<<<< HEAD
-**ExpenseIQ** is a lightweight expense tracking "I tried to create a conflict too" application built with Python. It helps users record, categorize, and analyze their expenses, providing a simple way to understand and manage personal spending.
-=======
 **ExpenseIQ** is a lightweight expense "causing a merge conflict" tracking application built with Python. It helps users record, categorize, and analyze their expenses, providing a simple way to understand and manage personal spending.
->>>>>>> main
+
 
 This project was developed as part of **Assignment 2 – GitHub Collaboration & Automation**, focusing on collaborative software development, version control, unit testing, and continuous integration.
 
