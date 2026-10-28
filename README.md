@@ -9,10 +9,12 @@ This project was developed as part of **Assignment 2 – GitHub Collaboration & 
 ### 1. Expense Management
 - Add new expenses with an amount, category, date, and description.
 - View recorded expenses.
+- Edit existing expenses.
 - Delete existing expenses.
 - Validate expense information.
+- Store and retrieve expenses from a local JSON file.
 
-### 2. Expense Analysis
+### 2. Expense Analytics (Planned)
 - Calculate total expenses.
 - Calculate spending by category.
 - Identify the category with the highest spending.
@@ -30,8 +32,8 @@ This project was developed as part of **Assignment 2 – GitHub Collaboration & 
 - **Python** – Application logic
 - **pytest** – Unit testing
 - **Git & GitHub** – Version control and collaboration
-- **GitHub Actions** – Automated testing
-- **GitHub Pages** – Project documentation website
+- **GitHub Actions** – Planned automated testing
+- **GitHub Pages** – Planned project documentation website
 
 ## Project Structure
 
@@ -40,15 +42,11 @@ ExpenseIQ/
 ├── expenseiq/
 │   ├── __init__.py
 │   ├── expenses.py
-│   └── analysis.py
+│   ├── storage.py
+│   └── cli.py
 ├── tests/
 │   ├── test_expenses.py
-│   └── test_analysis.py
-├── docs/
-│   └── index.html
-├── .github/
-│   └── workflows/
-│       └── tests.yml
+│   └── test_storage.py
 ├── .gitignore
 ├── requirements.txt
 └── README.md
@@ -68,6 +66,19 @@ Install the required dependencies:
 ```bash
 pip install -r requirements.txt
 ```
+
+## Using Expense Management
+
+Run the command-line interface with `python -m expenseiq.cli`. Expenses are saved to `expenses.json` in the current directory by default. Use `--file PATH` before a command to choose another JSON file.
+
+```bash
+python -m expenseiq.cli add --amount 12.50 --category Food --date 2026-10-28 --description "Lunch"
+python -m expenseiq.cli list
+python -m expenseiq.cli update 1 --amount 13.00
+python -m expenseiq.cli delete 1
+```
+
+Dates use `YYYY-MM-DD`. Amounts must be greater than zero. Expense analytics are planned separately.
 
 ## Running Tests
 
@@ -93,11 +104,11 @@ The `main` branch is protected through GitHub repository rules.
 
 ## Continuous Integration
 
-GitHub Actions automatically runs the Python test suite on pushes and Pull Requests to verify that the application works correctly.
+GitHub Actions testing is planned for a later stage of the assignment.
 
 ## GitHub Pages
 
-Project website: **[ExpenseIQ Project Page](https://YOUR_USERNAME.github.io/ExpenseIQ/)**
+The project website is planned for a later stage of the assignment.
 
 ## Project Status
 
