@@ -26,3 +26,5 @@ def save_data(path: Path, data: dict[str, Any]) -> None:
     """Write expense data to a local JSON file."""
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
+
+# Storage helper logic updated by Reda Nadir
