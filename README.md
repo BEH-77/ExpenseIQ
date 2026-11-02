@@ -29,8 +29,7 @@ This project was developed as part of **Assignment 2 – GitHub Collaboration & 
 |---|---|---|
 | Badr | `@BEH-77` | Expense Management |
 | Erraji Jihane | `@erraji-jihane` | Expense Analysis |
-
-## Technologies
+| Reda Nadir | `@xizvk` | Storage Persistence & CLI |## Technologies
 
 - **Python** – Application logic
 - **pytest** – Unit testing
