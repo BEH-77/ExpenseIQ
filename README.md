@@ -124,8 +124,7 @@ Live website: [https://beh-77.github.io/ExpenseIQ/](https://beh-77.github.io/Exp
 
 ## Project Status
 
-Project status: Development in progress.
-
+Project status: Undergoing final testing by Reda.
 ## License
 
 Created for educational purposes as part of Assignment 2 – GitHub Collaboration & Automation.
